@@ -6,10 +6,7 @@
 		</Else>
 	</If>	
 	
-	
-	<If Condition="(Me.KnowsSpell(5215)"/>
-	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
-	</If>
+
 	
 	
 	
