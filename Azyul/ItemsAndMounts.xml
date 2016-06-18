@@ -5,7 +5,7 @@
 Bots.Professionbuddy.PBLog.Log("[Azyul]: Moving to safe spot for vendoring 0");
 		<!--	<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" /> -->
 
-			<MoveTo Nav="Fly" X="9110.58" Y="-1222.07" Z="1165.35" />
+			<MoveTo Nav="Fly" X="9054.13" Y="-1168.24" Z="1058.64" />
 
 
 Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, "[Azyul]: @ Safe spot now");
