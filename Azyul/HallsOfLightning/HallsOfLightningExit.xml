@@ -7,10 +7,10 @@
 	</If>
 	
 	
-	<If Condition="(Me.KnowsSpell(5215)"/>
+	<If Condition="Me.KnowsSpell(5215)"/>
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	</If>
-		<If Condition="(Me.KnowsSpell(157274)"/>
+	<If Condition="Me.KnowsSpell(157274)"/>
 		<CustomBehavior File="RunCode" Code="SpellManager.Cast(157274);" />
 	</If>
 
