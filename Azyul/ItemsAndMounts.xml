@@ -2,6 +2,14 @@
 
 	<If Condition="SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708)" > <!-- Traveler's + Yak -->
 
+
+			<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" />
+			<MoveTo Nav="Fly" X="9116.35" Y="-1229.90" Z="1187.67" />
+			<MoveTo Nav="Fly" X="9110.58" Y="-1222.07" Z="1165.35" />
+
+	
+	
+	
 		<CustomBehavior File="WaitTimer" WaitTime="750" />
 		<CustomBehavior File="RunCode" Code="if (Me.KnowsSpell(61425)) { Mount.SummonMount(61425); } else if (Me.KnowsSpell(61447)) { Mount.SummonMount(61447); } else { Mount.SummonMount(122708); }" />
 		<CustomBehavior File="WaitTimer" WaitTime="2000" />
