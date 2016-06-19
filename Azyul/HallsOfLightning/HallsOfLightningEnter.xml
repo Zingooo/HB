@@ -1,10 +1,13 @@
 <If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1129.60)) &gt;= 30" >
+		Logging.Write(System.Windows.Media.Colors.Green, "Too far from instance, going closer");
 		<CustomBehavior File="FlyTo" X="9186.09" Y="-1386.17" Z="1144.80" />
 	</If>
 	
+	Logging.Write(System.Windows.Media.Colors.Green, "Running near instance");
 	<RunTo X="9184.104" Y="-1386.851" Z="1110.216" />
-
+	
+	Logging.Write(System.Windows.Media.Colors.Green, "Entering Instance");
 	<CustomBehavior File="MyCTM" X="9190.415" Y="-1395.566" Z="1110.215" TerminateWhen="Me.MapId == 602" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
 </If>
