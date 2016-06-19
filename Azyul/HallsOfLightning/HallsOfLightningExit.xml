@@ -6,6 +6,8 @@
 		</Else>
 	</If>
 	
+	
+	Logging.Write(System.Windows.Media.Colors.Green, "Casting Stealth");
 	<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 	
 	
