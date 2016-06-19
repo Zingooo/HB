@@ -1,5 +1,6 @@
 <If Condition="Me.MapId == 602" >
 
+Logging.Write(System.Windows.Media.Colors.Green, "Removing stealth by casting Mark of the Wild");
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(1126);" />
 
 </If>
