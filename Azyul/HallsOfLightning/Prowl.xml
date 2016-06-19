@@ -1,3 +1,5 @@
 <If Condition="Me.MapId == 602" >
 
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(1126);" />
+
 </If>
