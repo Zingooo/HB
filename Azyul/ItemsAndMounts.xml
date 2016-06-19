@@ -2,7 +2,7 @@
 
 	<If Condition="SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708)" > <!-- Traveler's + Yak -->
 
-Bots.Professionbuddy.PBLog.Log("[Azyul]: Moving to safe spot for vendoring 0");
+Logging.Write(System.Windows.Media.Colors.Green, "Going to safe spot to vendor");
 		<!--	<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" /> -->
 
 			<MoveTo Nav="Fly" X="9054.13" Y="-1168.24" Z="1058.64" />
