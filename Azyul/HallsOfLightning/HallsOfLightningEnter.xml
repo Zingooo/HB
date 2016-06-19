@@ -1,7 +1,7 @@
 <If Condition="Me.MapId != 602 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
 	<If Condition="Me.Location.Distance(new WoWPoint(9168.483, -1370.176, 1129.60)) &gt;= 50" >
 		<CustomBehavior File="FlyTo" X="9186.09" Y="-1386.17" Z="1144.80" />
-		<Else Condition="SpellManager.CanCast(5215)"/>
+		<Else Condition="SpellManager.CanCast(5215)">
 			
 			<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 			
