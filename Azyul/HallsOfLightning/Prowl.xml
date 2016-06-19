@@ -1,0 +1,3 @@
+<If Condition="Me.MapId == 602" >
+<CustomAction Code="Lua.DoString(&quot;/cancelaura Prowl&quot;);" />
+</If>
