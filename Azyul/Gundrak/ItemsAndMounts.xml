@@ -1,0 +1,38 @@
+<If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots &amp;&amp; (SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708))" >
+
+	<If Condition="SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708)" > <!-- Traveler's + Yak -->
+	
+	
+Logging.Write(System.Windows.Media.Colors.Green, "Going to safe spot to vendor");
+		<!--	<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" /> -->
+
+	<MoveTo Nav="Fly" X="6955.17" Y="-4422.63" Z="533.82" />
+			<MoveTo Nav="Fly" X="6985.59" Y="-4400.97" Z="519.05" />
+
+
+Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, "[Azyul]: @ Safe spot now");
+
+	
+	
+		<CustomBehavior File="WaitTimer" WaitTime="750" />
+		<CustomBehavior File="RunCode" Code="if (Me.KnowsSpell(61425)) { Mount.SummonMount(61425); } else if (Me.KnowsSpell(61447)) { Mount.SummonMount(61447); } else { Mount.SummonMount(122708); }" />
+		<CustomBehavior File="WaitTimer" WaitTime="2000" />
+
+		<CustomBehavior File="InteractWith" MobId1="32639" MobId2="32641" MobId3="62822" WaitTime="1000" />
+		
+		<CustomBehavior File="RunCode" >
+		<![CDATA[
+			foreach (WoWItem i in Me.BagItems)
+			{
+				if (i != null && i.Entry != 6948 && !(Contains(Settings.Instance.ProtectedItemNames, i.Quality.ToString()) || Contains(Settings.Instance.ProtectedItemNames, i.Name) || Contains(Settings.Instance.ProtectedItemNames, i.Entry.ToString())) && !Contains(Settings.Instance.DepositItemNames, i.Name) && !Me.Combat && !Me.IsDead && !Me.IsGhost && MerchantFrame.Instance.IsVisible)
+					i.UseContainerItem();
+					StyxWoW.SleepForLagDuration();
+			}
+			Lua.DoString("RepairAllItems();");
+		]]>
+		</CustomBehavior>
+	</If>
+
+	<!-- Add Repair Bot support // Jeeves // Portable Mailboxes // etc -->
+	
+</If>
