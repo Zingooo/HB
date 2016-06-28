@@ -1,0 +1,33 @@
+<If Condition="Me.MapId != 604 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
+	<If Condition="Me.Location.Distance(new WoWPoint(6944.809, -4426.977, 450.8831)) &gt; 100 " >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: Heading to Instance.&quot;);" />
+	</If>
+	<MoveTo Nav="Fly" X="6966.817" Y="-4405.588" Z="443.6469" />
+	<!--<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" />-->
+	<If Condition ="Me.IsFlying">
+ <MoveTo Nav="Fly" X="6968.59" Y="-4404.028" Z="442.5896" />
+ <Else>
+ <CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
+   
+ </Else>
+</If>
+
+	<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
+	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
+</If>
+
+
+<If Condition ="Me.IsFlying">
+ <MoveTo Nav="Fly" X="6968.59" Y="-4404.028" Z="442.5896" />
+ <Else>
+ <CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
+   
+ </Else>
+</If>
+
+
+
+
+<CustomBehavior File="Hooks\DoWhen" ActivityName="Dismount" AllowUseWhileFlying="true" AllowUseWhileMounted="true" UseWhen="Me.IsFlying &amp;&amp; !Me.Combat &amp;&amp; Me.CurrentTarget != null &amp;&amp; Me.CurrentTarget.IsAlive &amp;&amp; Me.CurrentTarget.Distance &lt;= 39 " >
+    <CustomBehavior File="RunCode"><![CDATA[ Lua.DoString("Dismount();"); await Coroutine.Sleep(350); SpellManager.Cast(30455); await Coroutine.Sleep(600); SpellManager.Cast(130); ]]></CustomBehavior>
+</CustomBehavior>  
