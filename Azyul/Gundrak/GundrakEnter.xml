@@ -4,13 +4,12 @@
 	</If>
 	<MoveTo Nav="Fly" X="6966.817" Y="-4405.588" Z="443.6469" />
 	<!--<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" />-->
-	<If Condition ="Me.IsFlying">
- <MoveTo Nav="Fly" X="6968.59" Y="-4404.028" Z="442.5896" />
- <Else>
- <CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
-   
- </Else>
-</If>
+	
+	
+	<CustomBehavior File="RunCode"><![CDATA[ Lua.DoString("Dismount();"); ]]></CustomBehavior> 
+	
+	
+
 
 	<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
