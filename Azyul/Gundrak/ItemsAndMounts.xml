@@ -39,7 +39,7 @@
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 <CustomBehavior File="WaitTimer" WaitTime="1000" />
 
-<CustomBehavior File="MyCTM" X="6960.80" Y="-4395.74" Z="513.32" Timeout="2000" />
+<CustomBehavior File="MyCTM" X="6960.80" Y="-4395.74" Z="513.32" />
 
 
 	<!-- Add Repair Bot support // Jeeves // Portable Mailboxes // etc -->
