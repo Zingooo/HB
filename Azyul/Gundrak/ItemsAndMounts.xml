@@ -9,7 +9,7 @@
 
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;At Safe spot now, mounting and vendoring&quot;);" />
 
-			<MoveTo Nav="Fly" X="6935.70" Y="-4619.11" Z="490.69" />
+			<MoveTo Nav="Fly" X="6965.62" Y="-4386.96" Z="519.04" />
 
 
 	
