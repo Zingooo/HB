@@ -32,6 +32,14 @@
 		]]>
 		</CustomBehavior>
 	</If>
+	
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Done vendoring&quot;);" />
+
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(768);" />
+<CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
+
+<CustomBehavior File="MyCTM" X="6960.80" Y="-4395.74" Z="513.32" Timeout="2000" />
+
 
 	<!-- Add Repair Bot support // Jeeves // Portable Mailboxes // etc -->
 	
