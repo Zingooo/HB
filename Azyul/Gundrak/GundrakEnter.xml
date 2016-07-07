@@ -21,7 +21,7 @@
 			<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
 			
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Cancelling fly form&quot;);" />
-			<CustomBehavior File="RunMacro" Macro="/cancelform" />
+		<!--	<CustomBehavior File="RunMacro" Macro="/cancelform" /> -->
  	
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying, position 3&quot;);" />
 			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
