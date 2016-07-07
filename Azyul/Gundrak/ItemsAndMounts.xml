@@ -8,7 +8,7 @@
 
 
 	
-			<MoveTo Nav="Fly" X="6965.40" Y="-4387.34" Z="518.994" />
+			<MoveTo Nav="Fly" X="6972.27" Y="-4381.87" Z="519.05" />
 <CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;At Safe spot now, mounting and vendoring 1&quot;);" />
 
 
@@ -37,6 +37,7 @@
 
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(768);" />
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
+<CustomBehavior File="WaitTimer" WaitTime="1000" />
 
 <CustomBehavior File="MyCTM" X="6960.80" Y="-4395.74" Z="513.32" Timeout="2000" />
 
