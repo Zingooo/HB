@@ -7,7 +7,7 @@ Logging.Write(System.Windows.Media.Colors.Green, "Going to safe spot to vendor")
 		<!--	<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" /> -->
 
 
-			<MoveTo Nav="Fly" X="6985.59" Y="-4400.97" Z="519.05" />
+			<MoveTo Nav="Fly" X="6826.02" Y="-4320.25" Z="485.55" />
 
 
 Bots.Professionbuddy.PBLog.Log(System.Windows.Media.Colors.DeepSkyBlue, "[Azyul]: @ Safe spot now");
