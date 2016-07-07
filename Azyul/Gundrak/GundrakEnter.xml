@@ -7,7 +7,7 @@
 	
 
 		<If Condition ="Me.IsFlying">
-				<MoveTo Nav="Fly" X="6966.817" Y="-4405.588" Z="443.6469" />
+				<MoveTo Nav="Fly" X="6962.49" Y="-4400.89" Z="475.02" />
  <!--	<CustomBehavior File="RunCode"><![CDATA[ Lua.DoString("Dismount();"); ]]></CustomBehavior>  -->
  	<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
  	<!-- renive above line and first-->
