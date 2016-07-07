@@ -9,7 +9,14 @@
 
 		<If Condition="(Me.HasAura(5215))">
 			
-			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying&quot;);" />
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 2&quot;);" />
+			<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
+			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
+			
+		
+
+		<Else>
+ 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying&quot;);" />
 	
 			<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
 			
@@ -18,13 +25,7 @@
  	
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying, position 3&quot;);" />
 			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
-
-		<Else>
  	
- 	
-			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 2&quot;);" />
-			<CustomBehavior File="MyCTM" X="6973.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
-			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />
    
 		</Else>
 		</If>
