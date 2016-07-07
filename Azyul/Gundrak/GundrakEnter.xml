@@ -7,7 +7,7 @@
 	<MoveTo Nav="Fly" X="6959.817" Y="-4418.588" Z="443.6469" /> 
 	
 
-		<If Condition="(Me.HasAura(&quot;Travel Form&quot;))">
+		<If Condition="(Me.HasAura(5215))">
 			
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying&quot;);" />
 	
