@@ -4,10 +4,10 @@
 	</If>
 
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 &quot;);" />
-
+	<MoveTo Nav="Fly" X="6959.817" Y="-4418.588" Z="443.6469" /> 
 	
 
-		<If Condition="(Me.HasAura(783))">
+		<If Condition="(Me.HasAura(&quot;Travel Form&quot;))">
 			
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We're currently flying&quot;);" />
 	
