@@ -1,9 +1,9 @@
 <If Condition="Me.MapId != 604 &amp;&amp; Me.FreeBagSlots &gt;= Settings.Instance.VendorMinBagSlots" >
-	<If Condition="Me.Location.Distance(new WoWPoint(6944.809, -4426.977, 450.8831)) &gt; 100 " >
+	<If Condition="Me.Location.Distance(new WoWPoint(6944.809, -4426.977, 450.8831)) &gt; 300 " >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;[Azyul]: Heading to Instance.&quot;);" />
 	</If>
 
-<!--	<MoveTo Nav="Fly" X="6966.817" Y="-4405.588" Z="443.6469" /> -->
+	<MoveTo Nav="Fly" X="6966.817" Y="-4405.588" Z="443.6469" /> 
 	
 
 		<If Condition ="Me.IsFlying">
