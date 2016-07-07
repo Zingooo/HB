@@ -1,15 +1,15 @@
 <If Condition="Me.FreeBagSlots &lt; Settings.Instance.VendorMinBagSlots &amp;&amp; (SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708))" >
 
 	<If Condition="SpellManager.CanCast(61425) || SpellManager.CanCast(61447) || SpellManager.CanCast(122708)" > <!-- Traveler's + Yak -->
-	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Going to safe spot to vendor&quot;);" />
+	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Going to safe spot to vendor 1&quot;);" />
 
 	
 		<!--	<MoveTo Nav="Fly" X="9055.79" Y="-1328.44" Z="1109.36" /> -->
 
 
-	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;At Safe spot now, mounting and vendoring&quot;);" />
-
-			<MoveTo Nav="Fly" X="6965.62" Y="-4386.96" Z="519.04" />
+	
+			<MoveTo Nav="Fly" X="6965.40" Y="-4387.34" Z="518.994" />
+<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;At Safe spot now, mounting and vendoring 1&quot;);" />
 
 
 	
