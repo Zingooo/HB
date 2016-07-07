@@ -37,6 +37,8 @@
 
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(768);" />
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
+	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Casting stealth and waiting 1 second&quot;);" />
+
 <CustomBehavior File="WaitTimer" WaitTime="1000" />
 
 <CustomBehavior File="MyCTM" X="6960.80" Y="-4395.74" Z="513.32" />
