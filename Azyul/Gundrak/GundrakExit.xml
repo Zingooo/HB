@@ -7,9 +7,15 @@
 	</If>
 	
 	
-	Logging.Write(System.Windows.Media.Colors.Green, "Casting Stealth");
+<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Casting Stealth&quot;);" />
+
 <CustomBehavior File="RunCode" Code="SpellManager.Cast(5215);" />
 
+<If Condition="(Me.HasAura(5215))">
+	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Stealth On, exiting dungeon&quot;);" />
+
+	</If>
+	
 
 	<CustomBehavior File="RunCode" Code="AzyulGPHTracker.LogGPH();" />
 	<CustomBehavior File="MyCTM" X="1905.168" Y="640.1153" Z="176.6356" TerminateWhen="!Me.IsInInstance" />
