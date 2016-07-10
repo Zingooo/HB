@@ -5,7 +5,7 @@
 
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 of dungeon&quot;);" />
 	
-	<If Condition="CanFly()" >
+	<If Condition="CanFly()  &amp;&amp; Me.Location.Distance(new WoWPoint(6955.24, -4416.92, 450.02)) &gt; 10 " >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;2&quot;);" />
 
 		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
