@@ -5,20 +5,28 @@
 
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 of dungeon&quot;);" />
 	
-	<If Condition="CanFly()  &amp;&amp; Me.Location.Distance(new WoWPoint(6955.24, -4416.92, 450.02)) &gt; 30 " >
-		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;2&quot;);" />
-
-		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
-		<Else>
-			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;3&quot;);" />
-
-			<MoveTo Nav="Fly" X="6968.047" Y="-4408.18" Z="457.2327" />
-		</Else>
-</If>
-	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;4&quot;);" />
+	<If Condition="(Me.HasAura(5215))">
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;4&quot;);" />
 
 	<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
 	<!--<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />-->
+		<Else>
+			<If Condition="CanFly()" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;2&quot;);" />
+		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
+		<Else>
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;3&quot;);" />
+			<MoveTo Nav="Fly" X="6968.047" Y="-4408.18" Z="457.2327" />
+		</Else>
+	</If>
+		</Else>
+		
+		
+	</If>
+		
+	
+	
+
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
 </If>
 
