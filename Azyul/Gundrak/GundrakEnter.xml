@@ -6,9 +6,9 @@
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 of dungeon&quot;);" />
 	
 	<If Condition="CanFly()" >
-		<CustomBehavior File="FlyTo" X="6964.247" Y="-4408.18" Z="445.2327" />
+		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
 		<Else>
-			<MoveTo Nav="Fly" X="6964.247" Y="-4408.18" Z="445.2327" />
+			<MoveTo Nav="Fly" X="6968.047" Y="-4408.18" Z="457.2327" />
 		</Else>
 </If>
 	
