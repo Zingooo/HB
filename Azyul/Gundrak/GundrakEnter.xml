@@ -6,12 +6,17 @@
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 of dungeon&quot;);" />
 	
 	<If Condition="CanFly()" >
+		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;2&quot;);" />
+
 		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
 		<Else>
+			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;3&quot;);" />
+
 			<MoveTo Nav="Fly" X="6968.047" Y="-4408.18" Z="457.2327" />
 		</Else>
 </If>
-	
+	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;4&quot;);" />
+
 	<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
 	<!--<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />-->
 	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
