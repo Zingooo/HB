@@ -4,21 +4,27 @@
 	</If>
 
 	<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Moving to position 1 of dungeon&quot;);" />
-	<MoveTo Nav="Fly" X="6959.817" Y="-4418.588" Z="443.6469" /> 
+	
+	<If Condition="CanFly()" >
+		<CustomBehavior File="FlyTo" X="6964.247" Y="-4408.18" Z="445.2327" />
+		<Else>
+			<MoveTo Nav="Fly" X="6964.247" Y="-4408.18" Z="445.2327" />
+		</Else>
+</If>
 	
 
 		<If Condition="(Me.HasAura(5215))">
 			
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Entering Dungeon while stealthed&quot;);" />
 			<CustomBehavior File="MyCTM" X="6975.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
-			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6975.58" Y="-4404.028" Z="442.5896" />
+		<!--	<CustomBehavior File="GoThruPortal" Timeout="30000" X="6975.58" Y="-4404.028" Z="442.5896" /> -->
 
 		<Else>
  			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;We don't have stealth, moving near entrance&quot;);" />
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Cancelling fly form&quot;);" />
 			<CustomBehavior File="RunMacro" Macro="/cancelform" />
 			<CustomBehavior File="MyCTM" X="6975.58" Y="-4400.046" Z="441.5751" TerminateWhen="Me.IsInInstance" />
-			<CustomBehavior File="GoThruPortal" Timeout="30000" X="6975.58" Y="-4404.028" Z="442.5896" />
+			<!--	<CustomBehavior File="GoThruPortal" Timeout="30000" X="6975.58" Y="-4404.028" Z="442.5896" />  -->
  	
    
 		</Else>
