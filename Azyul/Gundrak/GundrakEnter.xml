@@ -26,7 +26,10 @@
 		
 	
 	
+	<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
+	<!--<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />-->
+<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
 
-	<CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
+
 </If>
 
