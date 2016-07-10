@@ -14,9 +14,11 @@
 			<If Condition="CanFly()" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Can fly 1&quot;);" />
 		<CustomBehavior File="FlyTo" X="6966.36" Y="-4408.18" Z="466.90" />
+		<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
 		<Else>
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Can NOT fly 2&quot;);" />
 			<MoveTo Nav="Fly" X="6966.36" Y="-4408.18" Z="466.90" />
+			<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
 		</Else>
 	</If>
 		</Else>
@@ -26,7 +28,7 @@
 		
 	
 	
-	<CustomBehavior File="MyCTM" X="7019.952" Y="-4350.624" Z="451.4101" TerminateWhen="Me.IsInInstance" />
+	
 	<!--<CustomBehavior File="GoThruPortal" Timeout="30000" X="6968.59" Y="-4404.028" Z="442.5896" />-->
 <CustomBehavior File="WaitTimer" WaitTime="10000" TerminateWhen="Me.IsInInstance" />
 
