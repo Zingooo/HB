@@ -13,10 +13,10 @@
 	
 			<If Condition="CanFly()" >
 		<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Can fly 1&quot;);" />
-		<CustomBehavior File="FlyTo" X="6968.047" Y="-4408.18" Z="457.2327" />
+		<CustomBehavior File="FlyTo" X="6966.36" Y="-4408.18" Z="466.90" />
 		<Else>
 			<CustomBehavior File="RunCode" Code="Logging.Write(System.Windows.Media.Colors.DeepSkyBlue, &quot;Can NOT fly 2&quot;);" />
-			<MoveTo Nav="Fly" X="6968.047" Y="-4408.18" Z="457.2327" />
+			<MoveTo Nav="Fly" X="6966.36" Y="-4408.18" Z="466.90" />
 		</Else>
 	</If>
 		</Else>
