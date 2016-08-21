@@ -1,0 +1,3 @@
+<If Condition="GetFactionReputation(1168) &lt; 42999">
+    Do some awesome things
+</If>
