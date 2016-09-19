@@ -1,0 +1,44 @@
+<If Condition="SpellManager.CanCast(83958) &amp;&amp; (Settings.Instance.DepositGold || Settings.Instance.DepositItems)" >
+	<CustomBehavior File="RunCode" Code="SpellManager.Cast(83958);" />
+	<CustomBehavior File="WaitTimer" WaitTime="3500" />
+	<!-- <CustomBehavior File="InteractWith" MobId1="206602" MobId2="206603" WaitForNpcs="false" WaitTime="2000" /> -->
+
+	<If Condition="Settings.Instance.DepositGold" >
+		<CustomBehavior File="RunCode" Code="AzyulGPHTracker.LogGPH();" />
+		<CustomBehavior File="RunCode"><![CDATA[
+				var guildBankFrame = new GuildBankFrame();
+				var guildBank = ObjectManager.GetObjectsOfType<WoWGameObject>().FirstOrDefault(o => o.Entry == 206602 || o.Entry == 206603);
+				var goldAmount = StyxWoW.Me.Copper;
+				if (guildBank != null)
+				{
+					guildBank.Interact();
+					await Coroutine.Wait(3000, () => guildBankFrame.IsVisible);
+					guildBankFrame.DepositMoney((int)goldAmount);
+					await Coroutine.Sleep(1000);
+				}
+			]]>
+		</CustomBehavior>	
+		<CustomBehavior File="RunCode" Code="AzyulGPHTracker.ResetGPHTracker();" />
+	</If>
+
+	<If Condition="Settings.Instance.DepositItems" >
+		<CustomBehavior File="RunCode"><![CDATA[
+				var guildBankFrame = new GuildBankFrame();
+				var guildBank = ObjectManager.GetObjectsOfType<WoWGameObject>().FirstOrDefault(o => o.Entry == 206602 || o.Entry == 206603);
+				if (guildBank != null)
+				{
+					guildBank.Interact();
+					await Coroutine.Wait(2500, () => guildBankFrame.IsVisible);
+					foreach (WoWItem i in Me.BagItems)
+					{
+						if((Contains(Settings.Instance.DepositItemNames, i.Name) || Contains(Settings.Instance.DepositItemNames, i.Quality.ToString()) || Contains(Settings.Instance.DepositItemNames, i.Entry.ToString())) && guildBankFrame.IsVisible)
+						{
+							i.UseContainerItem();
+							StyxWoW.SleepForLagDuration();
+						}
+					}
+				}
+			]]>
+		</CustomBehavior>	
+	</If>
+</If>
